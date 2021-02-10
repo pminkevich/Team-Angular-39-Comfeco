@@ -1,0 +1,23 @@
+{
+  "name": "team-angular-39-comfeco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@angular/cli": "^10.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pminkevich/Team-Angular-39-Comfeco.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pminkevich/Team-Angular-39-Comfeco/issues"
+  },
+  "homepage": "https://github.com/pminkevich/Team-Angular-39-Comfeco#readme"
+}
