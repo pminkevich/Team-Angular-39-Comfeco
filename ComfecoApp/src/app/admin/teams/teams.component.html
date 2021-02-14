@@ -25,7 +25,7 @@
           <div class="tasks-container" cdkDropList [cdkDropListData]="column.tasks" (cdkDropListDropped)="drop($event)">
             <div class="task" *ngFor="let item of column.tasks; i of index" cdkDrag>
               {{ item }}{{ column.tasks[i +1 ] }}
-              <app-level></app-level>
+             
             </div>
           </div>
         </div>
