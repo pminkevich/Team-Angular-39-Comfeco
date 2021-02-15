@@ -1,7 +1,8 @@
 
 export class user {
 
-userName:string;
+name:string;
+nickName?:string;
 userId?:string;
 isLider?:boolean;
 email?:string;
@@ -20,8 +21,8 @@ seniority:string;
 /**
  *
  */
-constructor(userName, level,teamId,isLider ) {
- this.userName=userName;
+constructor(name, level,teamId,isLider ) {
+ this.name=name;
  this.level=level;
  this.teamId=teamId;
  this.isLider=isLider;

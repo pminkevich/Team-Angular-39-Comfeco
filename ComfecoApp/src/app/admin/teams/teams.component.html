@@ -6,7 +6,9 @@
       </div>
     </div>
   </div>
-
+<div class="recalculating" *ngIf="reCalculating">
+  <h1>Recalculando...</h1>
+</div>
   <div class="board">
 
     <div class="board-bar">
@@ -22,8 +24,8 @@
             {{ team.name }}
           </div>
 
-          <div class="tasks-container" cdkDropList  [cdkDropListData]="team.usersTeam" (cdkDropListDropped)="drop($event, team.teamId )">
-            <div class="task" *ngFor="let user of team.usersTeam" cdkDrag >
+          <div class="tasks-container" cdkDropListSortingDisabled cdkDropList  [cdkDropListData]="team.usersTeam" (cdkDropListDropped)="drop($event, team.teamId )">
+            <div class="task" *ngFor="let user of team.usersTeam" cdkDrag [cdkDragData]="user" >
             
             <div *ngIf="!user.isLider" >{{ user.level}} - {{user.userName}}</div>
             <div *ngIf="user.isLider" style="color: seagreen;">{{ user.level}} - {{user.userName}}</div>
