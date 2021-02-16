@@ -5,8 +5,10 @@
     --color-primary-violet_active:#a26dd3;
     --color-yellow:#F3C239;
     --color-yellow_hover:#f8c947;
-    --color-gray:#AAA9B1;
     --color-white:#FFFFFF;
+    --color-gray:#AAA9B1;
+    --color-blue-black: #2D245F;
+    --color-placelholder:#E5E5E5
 }
 
 *{
@@ -26,3 +28,4 @@ button{
 input{
     outline: none;
 }
+
