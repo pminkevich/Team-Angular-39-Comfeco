@@ -24,43 +24,43 @@
 <title>cluster_ForgotPasswordModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="36,-70 36,-195 460,-195 460,-70 36,-70"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_ForgotPasswordModule_declarations</title>
-<polygon fill="none" stroke="black" points="264,-78 264,-130 452,-130 452,-78 264,-78"/>
-</g>
 <g id="clust4" class="cluster">
 <title>cluster_ForgotPasswordModule_imports</title>
-<polygon fill="none" stroke="black" points="44,-78 44,-130 256,-130 256,-78 44,-78"/>
+<polygon fill="none" stroke="black" points="240,-78 240,-130 452,-130 452,-78 240,-78"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_ForgotPasswordModule_declarations</title>
+<polygon fill="none" stroke="black" points="44,-78 44,-130 232,-130 232,-78 44,-78"/>
 </g>
 <!-- ForgotPasswordComponent -->
 <g id="node1" class="node">
 <title>ForgotPasswordComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="444.32,-122 271.68,-122 271.68,-86 444.32,-86 444.32,-122"/>
-<text text-anchor="middle" x="358" y="-99.8" font-family="Times,serif" font-size="14.00">ForgotPasswordComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="224.32,-122 51.68,-122 51.68,-86 224.32,-86 224.32,-122"/>
+<text text-anchor="middle" x="138" y="-99.8" font-family="Times,serif" font-size="14.00">ForgotPasswordComponent</text>
 </g>
 <!-- ForgotPasswordModule -->
 <g id="node2" class="node">
 <title>ForgotPasswordModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="329.04,-187 326.04,-191 305.04,-191 302.04,-187 178.96,-187 178.96,-151 329.04,-151 329.04,-187"/>
-<text text-anchor="middle" x="254" y="-164.8" font-family="Times,serif" font-size="14.00">ForgotPasswordModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="317.04,-187 314.04,-191 293.04,-191 290.04,-187 166.96,-187 166.96,-151 317.04,-151 317.04,-187"/>
+<text text-anchor="middle" x="242" y="-164.8" font-family="Times,serif" font-size="14.00">ForgotPasswordModule</text>
 </g>
 <!-- ForgotPasswordComponent&#45;&gt;ForgotPasswordModule -->
 <g id="edge1" class="edge">
 <title>ForgotPasswordComponent&#45;&gt;ForgotPasswordModule</title>
-<path fill="none" stroke="black" d="M300.55,-122.11C300.55,-122.11 300.55,-140.99 300.55,-140.99"/>
-<polygon fill="black" stroke="black" points="297.05,-140.99 300.55,-150.99 304.05,-140.99 297.05,-140.99"/>
+<path fill="none" stroke="black" d="M195.45,-122.11C195.45,-122.11 195.45,-140.99 195.45,-140.99"/>
+<polygon fill="black" stroke="black" points="191.95,-140.99 195.45,-150.99 198.95,-140.99 191.95,-140.99"/>
 </g>
 <!-- ForgotPasswordRoutingModule -->
 <g id="node3" class="node">
 <title>ForgotPasswordRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="247.66,-122 244.66,-126 223.66,-126 220.66,-122 52.34,-122 52.34,-86 247.66,-86 247.66,-122"/>
-<text text-anchor="middle" x="150" y="-99.8" font-family="Times,serif" font-size="14.00">ForgotPasswordRoutingModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="443.66,-122 440.66,-126 419.66,-126 416.66,-122 248.34,-122 248.34,-86 443.66,-86 443.66,-122"/>
+<text text-anchor="middle" x="346" y="-99.8" font-family="Times,serif" font-size="14.00">ForgotPasswordRoutingModule</text>
 </g>
 <!-- ForgotPasswordRoutingModule&#45;&gt;ForgotPasswordModule -->
 <g id="edge2" class="edge">
 <title>ForgotPasswordRoutingModule&#45;&gt;ForgotPasswordModule</title>
-<path fill="none" stroke="black" d="M213.28,-122.11C213.28,-122.11 213.28,-140.99 213.28,-140.99"/>
-<polygon fill="black" stroke="black" points="209.78,-140.99 213.28,-150.99 216.78,-140.99 209.78,-140.99"/>
+<path fill="none" stroke="black" d="M282.72,-122.11C282.72,-122.11 282.72,-140.99 282.72,-140.99"/>
+<polygon fill="black" stroke="black" points="279.22,-140.99 282.72,-150.99 286.22,-140.99 279.22,-140.99"/>
 </g>
 </g>
 </svg>
