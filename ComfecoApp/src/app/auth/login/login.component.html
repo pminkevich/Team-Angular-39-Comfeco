@@ -1,34 +1,43 @@
+<section class="login-content">
+  <div class="login-content__form">
+    <h1>LOGIN</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div>
+        <label for="email">Email</label>
+        <input type="email" class="form-control" formControlName="email" />
+        <p style="color: red;" *ngIf="email.invalid && (email.dirty || email.touched)">{{getErrorMessage()}}</p>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" class="form-control" formControlName="password" />
+        <p style="color: red;" *ngIf="password.invalid && (password.dirty || password.touched) ">
+          {{getPaswordErrorMessage()}}</p>
+      </div>
+      <button>
+        Login
+      </button>
+    </form>
+    <div>
+      <button (click)="onGoogleLogin()">
+        Google
+      </button>
+    </div>
+    <div>
+      <p>
+        Create an account ? <a [routerLink]="['/register']"> Register </a>
+      </p>
+    </div>
+    <div>
+      <p>
+        <a [routerLink]="['/forgot-password']"> Forgot password ? </a>
+      </p>
+    </div>
+    <h2 *ngIf="messageError" style="color: red;">{{messageError}}</h2>
 
-        <h1>LOGIN</h1>
-        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
-          <div>
-            <label for="email">Email</label>
-            <input type="email" class="form-control" formControlName="email" />
-            <p style="color: red;" *ngIf="email.invalid && (email.dirty || email.touched)">{{getErrorMessage()}}</p>
-          </div>
-          <div >
-            <label for="password">Password</label>
-            <input type="password" class="form-control" formControlName="password" />
-            <p style="color: red;" *ngIf="password.invalid && (password.dirty || password.touched) ">{{getPaswordErrorMessage()}}</p>
-          </div>
-          <button >
-            Login
-          </button>
-        </form>
-        <div>
-          <button (click)="onGoogleLogin()" >
-            Google
-          </button>
-        </div>
-        <div >
-          <p>
-            Create an account ? <a [routerLink]="['/register']"> Register </a>
-          </p>
-        </div>
-        <div>
-          <p>
-            <a [routerLink]="['/forgot-password']"> Forgot password ? </a>
-          </p>
-        </div>
-        <h2 *ngIf="messageError" style="color: red;">{{messageError}}</h2>
-      
+  </div>
+
+  <div class="login-content__advertisements">
+
+
+  </div>
+</section>
