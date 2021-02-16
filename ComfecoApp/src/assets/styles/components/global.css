@@ -2,8 +2,11 @@
 :root{
     --color-primary-violet:#764A9F;
     --color-yellow:#F3C239;
-
     --color-gray:#AAA9B1;
+    --color-blue-black: #2D245F;
+
+
+    --color-placelholder:#E5E5E5
 }
 
 *{
@@ -23,3 +26,4 @@ button{
 input{
     outline: none;
 }
+
