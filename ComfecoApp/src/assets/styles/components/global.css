@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 :root{
     --color-primary-violet:#764A9F;
+    --color-primary-violet_hover:#9267bb;
+    --color-primary-violet_active:#a26dd3;
     --color-yellow:#F3C239;
-
+    --color-yellow_hover:#f8c947;
     --color-gray:#AAA9B1;
+    --color-white:#FFFFFF;
 }
 
 *{
