@@ -1,0 +1,15 @@
+.login-content{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: red;
+    display: grid;
+    grid-template-columns: 380px 3fr;
+}
+
+.login-content__form{
+    padding: 40px 20px;
+}
+
+.login-content__advertisements{
+    background-color: royalblue;
+}

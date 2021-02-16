@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ComfecoApp"
+    }
+  },
+  "defaultProject": "ComfecoApp",
+  "cli": {
+    "analytics": "239213b0-5ce9-4c30-9c18-8424fe809b86"
+  }
 }
