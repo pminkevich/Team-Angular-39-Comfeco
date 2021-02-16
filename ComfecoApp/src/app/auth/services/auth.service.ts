@@ -65,17 +65,18 @@ export class AuthService extends RoleValidator {
     }
   }
 
-  async register(email: string, password: string): Promise<User> {
-    try {
+  async register(dataUser): Promise<User> {
+   
       const { user } = await this.afAuth.createUserWithEmailAndPassword(
-        email,
-        password
+        dataUser.email,
+        dataUser.password
       );
       await this.sendVerificationEmail();
+      if(user){
+        this.updateUserData(user,dataUser);
+      }
       return user;
-    } catch (error) {
-      console.log(error);
-    }
+    
   }
 
   async logout(): Promise<void> {
@@ -86,12 +87,13 @@ export class AuthService extends RoleValidator {
     }
   }
 
-  private updateUserData(user: User) {
+  private updateUserData(user: User,dataRegister=null) {
     const userRef: AngularFirestoreDocument<User> = this.afs.doc(
       `users/${user.uid}`
     );
-
-    const data: User = {
+  
+  
+    let data: User = {
       uid: user.uid,
       email: user.email,
       emailVerified: user.emailVerified,
@@ -99,6 +101,9 @@ export class AuthService extends RoleValidator {
       photoURL: user.photoURL,
       role: 'ADMIN',
     };
+
+    data=(dataRegister != null)?Object.assign(data, dataRegister):data;
+    
 
     return userRef.set(data, { merge: true });
   }
