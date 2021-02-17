@@ -21,7 +21,7 @@ email: ['', Validators.required],
 password: ['', Validators.required],
 whatsapp: ['', Validators.required],
 discordUser: ['', Validators.required],
-
+passwordConfirmacion: ['', Validators.required]
 
 })
    }
@@ -32,27 +32,35 @@ discordUser: ['', Validators.required],
   get password() { return this.registerForm.get('password'); }
   get whatsapp() { return this.registerForm.get('whatsapp'); }
   get discordUser() { return this.registerForm.get('discordUser'); }
-
+  get passwordConfirmacion() { return this.registerForm.get('passwordConfirmacion'); }
   ngOnInit(): void {
   }
   onRegister(){
+    if(this.registerForm.value.password != this.registerForm.value.passwordConfirmacion){
+      Swal.fire({
+        title: 'Ojo!',
+        text: "La contraseña y la confirmación deben ser iguales.",
+        icon: 'info',
+        confirmButtonText: 'Cool'
+      })
+    }
     this.authSvc.register(this.registerForm.value).then((user)=>{
       if (user && user.emailVerified) {
         this.router.navigate(['/suscriptor']);
       } else if (user) {
         this.router.navigate(['/login/verificar-email']);
       }
-      
+
     }, function(reason) {
       console.log(reason);
       Swal.fire({
-        title: 'Error!',
+        title: 'alerta!',
         text: reason.message,
-        icon: 'error',
+        icon: 'warning',
         confirmButtonText: 'Cool'
       })
     });
-    
+
     console.log(this.registerForm.value);
   }
   getErrorMessage(campo:string):string {
@@ -82,10 +90,14 @@ switch(campo){
     if (this.discordUser.hasError('required')) {
       return 'Debe Ingresar un usuario de Discord';
     }
+  case 'passwordConfirmacion':
+    if (this.discordUser.hasError('required')) {
+      return 'Debe Ingresar la confirmación de la contraseña';
+    }
 
 
 }
 
-    
+
   }
 }
