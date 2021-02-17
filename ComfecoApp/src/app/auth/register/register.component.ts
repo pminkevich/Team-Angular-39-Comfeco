@@ -54,7 +54,7 @@ passwordConfirmacion: ['', Validators.required]
     }, function(reason) {
       console.log(reason);
       Swal.fire({
-        title: 'alerta!',
+        title: 'Alerta!',
         text: reason.message,
         icon: 'warning',
         confirmButtonText: 'Cool'
