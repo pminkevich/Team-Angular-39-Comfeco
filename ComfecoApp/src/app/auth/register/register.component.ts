@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '@app/core/services/auth.service';
 import Swal from 'sweetalert2';
 @Component({
   selector: 'app-register',
@@ -33,8 +33,10 @@ export class RegisterComponent implements OnInit {
   get whatsapp() { return this.registerForm.get('whatsapp'); }
   get discordUser() { return this.registerForm.get('discordUser'); }
   get passwordConfirmacion() { return this.registerForm.get('passwordConfirmacion'); }
+
   ngOnInit(): void {
   }
+
   onRegister() {
     if (this.registerForm.value.password != this.registerForm.value.passwordConfirmacion) {
       Swal.fire({
@@ -48,17 +50,15 @@ export class RegisterComponent implements OnInit {
         if (user && user.emailVerified) {
           this.router.navigate(['/suscriptor']);
         } else if (user) {
-          this.router.navigate(['/login/verificar-email']);
+          Swal.fire({
+            title: 'Alerta!',
+            text: 'Se ha enviado un Email debe Confirmarlo!',
+            icon: 'warning',
+            confirmButtonText: 'Cool'
+          })
+          this.router.navigate(['/login']);
         }
 
-      }, function (reason) {
-        console.log(reason);
-        Swal.fire({
-          title: 'Alerta!',
-          text: reason.message,
-          icon: 'warning',
-          confirmButtonText: 'Cool'
-        })
       });
     }
 

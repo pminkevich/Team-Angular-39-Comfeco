@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '@app/core/services/auth.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -17,6 +17,7 @@ export class ForgotPasswordComponent {
   });
 
   get userEmail() { return this.forgotForm.get('userEmail'); }
+
   constructor(private authSvc: AuthService, private router: Router) { }
 
   async onReset() {

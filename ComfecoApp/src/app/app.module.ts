@@ -19,8 +19,8 @@ import { environment } from 'src/environments/environment';
 /**
  * Services
  */
-import { AuthService } from './auth/services/auth.service';
-import { NotificationService } from './services/notification.service';
+import { AuthService } from '@app/core/services/auth.service';
+import { NotificationService } from '@app/core/services/notification.service';
 
 
 
