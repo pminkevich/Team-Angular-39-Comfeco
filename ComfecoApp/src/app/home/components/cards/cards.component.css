@@ -1,0 +1,40 @@
+.cards{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+width: 100%;
+height: 180px;
+background-color:rgba(0,0,0,0.18);
+
+
+}
+.botones{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+
+
+}
+.circle{
+
+border-radius: 50%;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+.cards{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+width: 100%;
+height: 100%;
+background-color:rgba(0,0,0,0.18);
+
+
+}
+ 
+}

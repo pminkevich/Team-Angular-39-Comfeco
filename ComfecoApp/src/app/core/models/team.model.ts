@@ -19,3 +19,19 @@ export class Team {
     this.teamId=teamId;
    }
 }
+
+export class TeamLider{
+
+image:string;
+name:string;
+team: string;
+/**
+ *
+ */
+constructor(image:string, name:string, team:string) {
+ this.image=image;
+this.name=name;
+this.team=team;
+  
+}
+}

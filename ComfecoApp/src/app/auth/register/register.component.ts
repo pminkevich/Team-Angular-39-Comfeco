@@ -56,7 +56,7 @@ export class RegisterComponent implements OnInit {
             icon: 'warning',
             confirmButtonText: 'Cool'
           })
-          this.router.navigate(['/login']);
+          this.router.navigate(['/register/team']);
         }
 
       });
