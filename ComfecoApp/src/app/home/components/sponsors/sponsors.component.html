@@ -1,0 +1,18 @@
+
+
+<swiper
+[slidesPerView]="5"
+[spaceBetween]="50"
+(swiper)="onSwiper($event)"
+(slideChange)="onSlideChange()"
+[navigation]="{}"
+      [pagination]="{ clickable: true }"
+
+  class="mt-5"
+>
+  <ng-template swiperSlide *ngFor="slide of sponsors" class="text-centar">
+    <img src="https://avatars.githubusercontent.com/u/7414771?s=460&u=0aafba4f249ef3f06087354f7d3000307dfb5405&v=4" style="border-radius: 50%; width: 70px;" alt="...">
+  </ng-template>
+
+</swiper>
+

@@ -5,13 +5,15 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { CardComponent } from './components/card/card.component';
 import { CardsComponent } from './components/cards/cards.component';
-
+import { SponsorsComponent } from './components/sponsors/sponsors.component';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
-  declarations: [HomeComponent, CardComponent, CardsComponent],
+  declarations: [HomeComponent, CardComponent, CardsComponent, SponsorsComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    SwiperModule
   ]
 })
 export class HomeModule { }

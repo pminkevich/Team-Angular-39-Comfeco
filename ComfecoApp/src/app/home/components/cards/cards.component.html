@@ -1,12 +1,21 @@
-<div class="cards">
-  <app-card [tipo]="team"></app-card>
-  
+<swiper
+    [slidesPerView]="3"
+    [spaceBetween]="50"
+    (swiper)="onSwiper($event)"
+    (slideChange)="onSlideChange()"
+    [autoplay]="{delay: 2500,disableOnInteraction: false}"
+    [pagination]="{ clickable: true }"
+    [scrollbar]="{ draggable: true }"
+      class="mt-5"
+    >
+      <ng-template swiperSlide *ngFor="slide of slides">
+        <div class="card" >
+          <img src="https://avatars.githubusercontent.com/u/7414771?s=460&u=0aafba4f249ef3f06087354f7d3000307dfb5405&v=4" class="card-img-top" alt="...">
+          <div class="card-body m-0 p-0 " style="background-color: rgba(181, 117, 241, 0.719);" >
+            <p class="text-center" >Angular</p>
+          </div>
+        </div>
+      </ng-template>
 
-</div>
-<div class="botones">
-  <button class="circle" (click)="onCircle('Angular')"><h1>.</h1></button>
-  <button class="circle" (click)="onCircle('React')"><h1>.</h1></button>
-  <button class="circle" (click)="onCircle('Svelte')"><h1>.</h1></button>
+    </swiper>
 
-
-</div>
