@@ -11,6 +11,7 @@
             <span class="sr-only">(current)</span>
           </a>
         </li>
+
       </ul>
 
 
@@ -22,8 +23,10 @@
   <p>{{user.displayName}}</p>
 </div>
 
+
+
 </div>
-<div class="notify">
+<div *ngIf="userNav" class="notify">
   <img src="./../../../../assets/images/iconos/notify.png" width="25" height="25" />
 
 </div>

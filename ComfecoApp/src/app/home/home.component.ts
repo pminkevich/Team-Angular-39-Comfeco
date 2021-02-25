@@ -11,14 +11,17 @@ export class HomeComponent implements OnInit {
   configNav;
   user: User;
   constructor(private authSvc:AuthService) {
-   this.configNav= {user:{name:true,nick:true,notification:true},items:[{name:'Home',link:'/home',active:true},{name:'Inscribite Aqui!',link:'/register'}]};
+   this.configNav= {user:{name:true,nick:true,notification:true},items:[{name:'Home',link:'/home',active:true},{name:'Inscribite Aqui!',link:'/register'},{name:'Login',link:'/login'}]};
   }
 
   ngOnInit(): void {
   this.authSvc.user$.subscribe(resp=>{
   this.user=resp;
   console.log(resp);
-
+if(resp){
+  this.configNav = { user: { name: true, nick: true, notification: true }, items: [{ name: 'Home', link: '/home', active: true }, { name: 'Inscribite Aqui!', link: '/register' }] };
+}
+    
 })
   }
 
