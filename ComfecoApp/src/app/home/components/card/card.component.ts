@@ -128,6 +128,7 @@ ngOnChanges(changes: SimpleChanges): void {
  
 this.searchTeam();
 
+  
   if (changes.tipo.currentValue==='React' ){
 
     this.containerCards.style.animation = 'loadCard 900ms cubic-bezier(0.25, 1, 0.5, 1)';
