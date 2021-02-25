@@ -24,10 +24,12 @@ import { NotificationService } from '@app/core/services/notification.service';
 
 
 
+
 @NgModule({
   declarations: [
-    AppComponent
-   
+    AppComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -37,8 +39,9 @@ import { NotificationService } from '@app/core/services/notification.service';
     AngularFireStorageModule,
     AngularFireMessagingModule,
     ReactiveFormsModule
-    
+
   ],
+
   providers: [AuthService,NotificationService],
   bootstrap: [AppComponent]
 })
