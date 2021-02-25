@@ -23,3 +23,23 @@
   -webkit-align-items: center;
   align-items: center;
 }
+.text-white{
+
+margin: 0;
+}
+.text-center{
+margin: 0;
+}
+
+@media(max-width:500px){
+
+.text-white{
+font-size: 12px;
+margin: 0;
+}
+.text-center{
+margin: 0;
+font-size: 13px;
+}
+
+}

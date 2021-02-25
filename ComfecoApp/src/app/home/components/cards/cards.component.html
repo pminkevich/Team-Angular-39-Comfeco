@@ -5,15 +5,34 @@
     (slideChange)="onSlideChange()"
     [autoplay]="{delay: 2500,disableOnInteraction: false}"
     [pagination]="{ clickable: true }"
-    [scrollbar]="{ draggable: true }"
+   
       class="mt-5"
     >
-      <ng-template swiperSlide *ngFor="slide of slides">
+      <ng-template swiperSlide *ngFor="slide of slides; index as i">
         <div class="card"  >
-          <img src="https://avatars.githubusercontent.com/u/7414771?s=460&u=0aafba4f249ef3f06087354f7d3000307dfb5405&v=4" class="card-img-top"   alt="...">
-          <div class="card-body m-0 p-0 " style="background-color: rgba(247, 52, 85, 0.952);" >
-            <p class="text-center" > <strong>Angular</strong> </p>
+          <img src="{{teams[i].image}}" class="card-img-top"   alt="...">
+
+          <div *ngIf="teams[i].team=='Angular'" class="card-body m-0 p-1 " style="background-color: rgba(250, 12, 52, 0.952);" >
+            <p class="text-white"> {{teams[i].name}} </p>
+            <p class="text-center" > <strong>{{teams[i].team}}</strong> </p>
           </div>
+
+          <div *ngIf="teams[i].team=='Svelte'" class="card-body m-0 p-1 " style="background-color: rgba(245, 172, 63, 0.952);">
+            <p class="text-white"> {{teams[i].name}} </p>
+            <p class="text-center"> <strong>{{teams[i].team}}</strong> </p>
+            </div>
+
+        <div *ngIf="teams[i].team=='React'" class="card-body m-0 p-1 " style="background-color: rgba(44, 216, 247, 0.952);">
+          <p class="text-white"> {{teams[i].name}} </p>
+          <p class="text-center"> <strong>{{teams[i].team}}</strong> </p>
+        </div>
+
+        <div *ngIf="teams[i].team=='Vue'" class="card-body m-0 p-1 " style="background-color: rgba(20, 184, 69, 0.952);">
+          <p class="text-white"> {{teams[i].name}} </p>
+          <p class="text-center"> <strong>{{teams[i].team}}</strong> </p>
+        </div>
+
+
         </div>
       </ng-template>
 
