@@ -8,13 +8,18 @@ import { CardsComponent } from './components/cards/cards.component';
 import { SponsorsComponent } from './components/sponsors/sponsors.component';
 import { SwiperModule } from 'swiper/angular';
 import { CountdownComponent } from './components/countdown/countdown.component';
+import { SharedModule } from '@app/shared/shared.module';
+
+
+
 
 @NgModule({
   declarations: [HomeComponent, CardComponent, CardsComponent, SponsorsComponent, CountdownComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SwiperModule
+    SwiperModule,
+    SharedModule
   ]
 })
 export class HomeModule { }
