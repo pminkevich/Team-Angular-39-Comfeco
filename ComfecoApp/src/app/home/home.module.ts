@@ -9,12 +9,13 @@ import { SponsorsComponent } from './components/sponsors/sponsors.component';
 import { SwiperModule } from 'swiper/angular';
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { SharedModule } from '@app/shared/shared.module';
+import { ComunidadesComponent } from './pages/comunidades/comunidades.component';
 
 
 
 
 @NgModule({
-  declarations: [HomeComponent, CardComponent, CardsComponent, SponsorsComponent, CountdownComponent],
+  declarations: [HomeComponent, CardComponent, CardsComponent, SponsorsComponent, CountdownComponent, ComunidadesComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
