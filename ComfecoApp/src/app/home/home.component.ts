@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '@app/shared/models/user.interface';
+import { AuthService } from '@app/core/services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   configNav;
-  constructor() {
+  user: User;
+  constructor(private authSvc:AuthService) {
    this.configNav= {user:{name:true,nick:true,notification:true},items:[{name:'Home',link:'/home',active:true},{name:'Inscribite Aqui!',link:'/register'}]};
   }
 
   ngOnInit(): void {
+  this.authSvc.user$.subscribe(resp=>{
+  this.user=resp;
+  console.log(resp);
 
+})
   }
 
 }

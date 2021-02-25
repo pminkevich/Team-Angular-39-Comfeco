@@ -32,7 +32,7 @@ export class CountdownComponent implements OnInit {
   countdown(dateTo){
     const timerUpdate = setInterval( () => {
         this.currenTime = this.getTime(dateTo);
-        console.log(this.currenTime);
+        //console.log(this.currenTime);
         
         if (this.currenTime.time <= 1) {
             clearInterval(timerUpdate);

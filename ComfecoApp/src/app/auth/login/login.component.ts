@@ -59,7 +59,7 @@ messageError:string;
 
   private checkUserIsVerified(user: User) {
     if (user && user.emailVerified) {
-      this.router.navigate(['/suscriptor']);
+      this.router.navigate(['/home']);
     } else if (user) {
       this.router.navigate(['/login/verificar-email']);
     } else {

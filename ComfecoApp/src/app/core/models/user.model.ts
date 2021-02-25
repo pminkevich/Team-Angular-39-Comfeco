@@ -15,7 +15,7 @@ lastVisited?:Date;
 team?:boolean;
 teamId?:string;
 photo?:string;
-seniority:string;
+seniority?:string;
 
 
 /**
