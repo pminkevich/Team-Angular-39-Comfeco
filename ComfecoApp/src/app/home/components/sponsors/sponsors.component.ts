@@ -17,7 +17,11 @@ SwiperCore.use([Autoplay, Pagination, Scrollbar,Navigation, A11y]);
 })
 export class SponsorsComponent implements OnInit {
 
-  sponsors=[];
+  sponsors=[
+'',
+
+
+];
   constructor() {
     this.sponsors = Array.from({ length: 10 }).map(
       (el, index) => `sponsors ${index + 1}`
