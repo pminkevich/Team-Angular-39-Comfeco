@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { PerfilRoutingModule } from './perfil-routing.module';
+import { PerfilComponent } from './perfil.component';
 import { FooterComponent } from '@app/shared/components-global/footer/footer.component';
 import { NavComponent } from '@app/shared/components-global/nav/nav.component';
-import { RouterModule } from '@angular/router';
-
+import { SharedModule } from '@app/shared/shared.module';
 
 
 @NgModule({
-  declarations: [FooterComponent,NavComponent],
+  declarations: [PerfilComponent],
   imports: [
     CommonModule,
-    RouterModule
-  ],
-  exports: [FooterComponent, NavComponent]
+    PerfilRoutingModule,
+    SharedModule
+  ]
 })
-export class SharedModule { }
+export class PerfilModule { }

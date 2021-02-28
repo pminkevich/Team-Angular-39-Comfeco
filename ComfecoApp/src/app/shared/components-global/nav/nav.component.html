@@ -18,9 +18,10 @@
     </div>
   </div>
 <div class="userMenu">
-<div *ngIf="userNav" class="user">
+<div (click)="showMenu=!showMenu" *ngIf="userNav" class="user">
   <img src="{{user.photoURL}}" alt="">
   <p>{{user.displayName}}</p>
+  <div  class="but"></div>
 </div>
 
 
@@ -32,4 +33,16 @@
 </div>
 </nav>
 
+
+<div  *ngIf="showMenu">
+<div class="menuHide">
+<ul>
+<li><a [routerLink]="['/perfil']">Perfil</a></li>
+<li><hr></li>
+<li (click)="logOut()">Logout</li>
+
+</ul>
+
+</div>
+</div>
 
