@@ -10,6 +10,8 @@ import { User } from '@app/shared/models/user.interface';
 export class PerfilComponent implements OnInit {
   configNav;
   user: User;
+  classSubMenu="bg-danger";
+  seccionActual="PERFIL";
   constructor(private authSvc: AuthService) { 
 this.configNav = { user: { name: true, nick: true, notification: true }, items: [{ name: 'Home', link: '/home', active: true }, { name: 'Inscribite Aqui!', link: '/register' }, { name: 'Login', link: '/login' }] };
 
@@ -30,6 +32,18 @@ this.configNav = { user: { name: true, nick: true, notification: true }, items: 
     this.authSvc.logout();
     this.configNav = { user: { name: true, nick: true, notification: true }, items: [{ name: 'Home', link: '/home', active: true }, { name: 'Inscribite Aqui!', link: '/register' }, { name: 'Login', link: '/login' }] };
 
+  }
+
+
+
+  seccionPerfil(){
+    this.classSubMenu="bg-danger";
+    this.seccionActual="PERFIL";
+  }
+
+  seccionInsignias(){
+    this.classSubMenu="bg-success";
+    this.seccionActual="INSIGNIAS";
   }
 
 

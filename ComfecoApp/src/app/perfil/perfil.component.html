@@ -1,13 +1,13 @@
 <app-nav [config]="configNav" [user]="user" (logout)="logOut()"></app-nav>
 <div class="container-fluid ">
-  <div class="row bg-warning d-flex justify-content-center" style="margin-top: 6%; margin-bottom: 0%; padding-bottom: 0%;">
+  <div [ngClass]="classSubMenu" class="row bg-warning d-flex justify-content-center" style="margin-top: 6%; margin-bottom: 0%; padding-bottom: 0%;">
     <div class="col-lg-9 col-md-12 text-center  py-3 " style="margin-bottom: 0%; ">
-      <div class="row  bg-dark d-flex justify-content-center">
+      <div class="row  d-flex justify-content-center">
         <div class="col-md-3  col-sm-12 text-center ">
-          <button type="button" class="btn btn-lg btn-primary w-100" > Mi perfil</button>
+          <button type="button" class="btn btn-lg btn-primary w-100" (click)="seccionPerfil()" > Mi perfil</button>
         </div>
         <div class="col-md-3 col-sm-12   text-center ">
-          <button type="button" class="btn btn-secondary btn-lg w-100" >Insignias</button>
+          <button type="button" class="btn btn-secondary btn-lg w-100"  (click)="seccionInsignias()">Insignias</button>
         </div>
         <div class="col-md-3 col-sm-12   text-center ">
           <button type="button" class="btn btn-secondary btn-lg w-100 " >Grupos</button>
@@ -19,7 +19,7 @@
 
     </div>
   </div>
-  <div class="row ">
+  <div class="row "  *ngIf="seccionActual=='PERFIL'">
 
     <div class="col-lg-3">
 
@@ -148,6 +148,10 @@
 
   </div>
   <!-- /.row -->
+
+  <div *ngIf="seccionActual=='INSIGNIAS'" >
+       ddddddf
+  </div>
 
 </div>
 <app-footer></app-footer>
