@@ -1,5 +1,4 @@
-<div class="row" *ngIf="section=='insignias'">
-<div class="col-lg-6">
+<div *ngIf="section=='insignias'">
   <div class="row" style="margin-top: 10%; background-color: rgba(179, 174, 174, 0.438);">
     <div class="col-lg-12 mt-2">
       <div class="row">
@@ -39,10 +38,9 @@
   </div>
   <!-- /.row -->
 </div>
-</div>
 
-<div class="row" *ngIf="section=='grupos'">
-<div class="col-lg-6">
+
+<div *ngIf="section=='grupos'">
   <div class="row" style="margin-top: 10%; background-color: rgba(179, 174, 174, 0.438);">
     <div class="col-lg-12 mt-2">
       <div class="row">
@@ -51,7 +49,6 @@
         </div>
       </div>
     </div>
-
     <div class="col-lg-12">
       <app-insignias></app-insignias>
     </div>
@@ -81,11 +78,10 @@
     </div>
   </div>
   <!-- /.row -->
-</div>
+
 </div>
 
-<div class="row" *ngIf="section=='eventos'">
-<div class="col-lg-6">
+<div *ngIf="section=='eventos'">
   <div class="row" style="margin-top: 10%; background-color: rgba(179, 174, 174, 0.438);">
     <div class="col-lg-12 mt-2">
       <div class="row">
@@ -125,28 +121,25 @@
   </div>
   <!-- /.row -->
 </div>
-</div>
 
 <div class="row" *ngIf="section=='profile'">
 <section class="login-content">
   <div class="login-content__main">
-    
-
-    <div class="login-content__titles">
-      <div class="userMenu">
-        <div  class="user">
-          <img src="{{user.photoURL}}" alt="">
-          <p>{{user.displayName}}</p>
-          <div class="but"></div>
-        </div>
+    <div class="userMenu">
+      <div  class="user">
+        <img src="{{user.photoURL}}" alt="">
+        <p>{{user.displayName}}</p>
+        <div class="but"></div>
       </div>
     </div>
 
+  
+
     <form class="form" [formGroup]="registerForm" (ngSubmit)="onRegister()">
-      <div class="line">
+<div class="line">
       <div class="form__group">
         <label for="nick">Nick Name</label>
-        <input type="text" value="{{user.displayName}}" formControlName="nickName" placeholder="Ingresa tu Nick Name" />
+        <input type="text" formControlName="nickName" placeholder="Ingresa tu Nick Name" />
         <p class="form__error" *ngIf="nickName.invalid && (nickName.dirty || nickName.touched)">
           {{ getErrorMessage("nickName") }}
         </p>
@@ -161,11 +154,12 @@
 </div>
       <div class="form__group">
         <label for="email">Email</label>
-        <input type="email" formControlName="email" placeholder="Ingresa tu email" />
+        <input type="email" value="{{user.email}}" formControlName="email" placeholder="Ingresa tu email" />
         <p class="form__error" *ngIf="email.invalid && (email.dirty || email.touched)">
           {{ getErrorMessage("email") }}
         </p>
       </div>
+<div class="line">
       <div class="form__group">
         <label for="password">Contraseña</label>
         <input type="password" formControlName="password" placeholder="Ingrese contrasena" />
@@ -179,6 +173,7 @@
           *ngIf="passwordConfirmacion.invalid && (passwordConfirmacion.dirty || passwordConfirmacion.touched)">
           {{ getErrorMessage("passwordConfirmacion") }}</span>
       </div>
+</div>
       <div class="form__group">
         <label for="whatsapp">WhatsApp</label>
         <input type="number" id="whatsapp" formControlName="whatsapp" placeholder="Ingresa tu whatsapp" />
