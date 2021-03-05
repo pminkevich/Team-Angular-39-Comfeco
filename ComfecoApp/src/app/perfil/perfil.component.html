@@ -4,23 +4,23 @@
     <div class="col-lg-9 col-md-12 text-center py-4 mt-3" style="margin-bottom: 0%; ">
       <div class="row  d-flex justify-content-center align-bottom">
         <div class="col-md-3  col-sm-12 text-center ">
-          <button type="button" class="btn btn-lg btn-primary w-100" (click)="seccionPerfil()" ><i class="fas fa-user pr-1"></i>Mi perfil</button>
+          <button type="button" class="btn btn-lg btn-primary w-100" (click)="view('profile')" ><i class="fas fa-user pr-1"></i>Mi perfil</button>
         </div>
         <div class="col-md-3 col-sm-12   text-center ">
-          <button type="button" class="btn btn-secondary btn-lg w-100"  (click)="seccionInsignias()"><i class="fas fa-medal pr-2"></i>Insignias</button>
+          <button type="button" class="btn btn-secondary btn-lg w-100"  (click)="view('insignias')"><i class="fas fa-medal pr-2"></i>Insignias</button>
         </div>
         <div class="col-md-3 col-sm-12   text-center ">
-          <button type="button" class="btn btn-secondary btn-lg w-100 " (click)="seccionGrupos()"><i class="fas fa-users pr-2"></i>Grupos</button>
+          <button type="button" class="btn btn-secondary btn-lg w-100 " (click)="view('grupos')"><i class="fas fa-users pr-2"></i>Grupos</button>
         </div>
         <div class="col-md-3 col-sm-12   text-center ">
-          <button type="button" class="btn btn-secondary btn-lg w-100 " (click)="seccionEventos()"><i class="fas fa-calendar-check pr-2"></i>Eventos</button>
+          <button type="button" class="btn btn-secondary btn-lg w-100 " (click)="view('eventos')"><i class="fas fa-calendar-check pr-2"></i>Eventos</button>
         </div>
     </div>
 
     </div>
   </div>
   
-  <div class="row" *ngIf="seccionActual=='PERFIL'">
+  <div class="row" >
     <div class="col-lg-3">
       <div class="list-group mt-5 list-group-flush">
         <div class="card w-100">
@@ -49,44 +49,8 @@
     </div>
     <!-- /.col-lg-3 -->
 
-    <div class="col-lg-6">
-      <div  class="row" style="margin-top: 10%; background-color: rgba(179, 174, 174, 0.438);">
-        <div class="col-lg-12 mt-2">
-          <div class="row">
-            <div class="col-lg-6">
-              <h5> Insignias</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-12">
-           <app-insignias></app-insignias>
-        </div>
-      </div>
-
-      <div class="row mt-5" >
-        <div class="col-lg-12 ">
-          <h5>Actividad reciente</h5>
-        </div>
-        <div class="col-lg-12 px-0">
-          <div class="card">
-            <div class="card-body  border-bottom ">
-              <div class="container">
-                <div class="row">
-                  <div class="col-8">
-                    <p>Te has unido al evento Community Fest and Code.</p> 
-                  </div>
-                  <div class="col-4 text-right px-0">
-                    <a href="#"><img class="" src="https://voilagraphicdesign.com/wp-content/uploads/2019/08/Calendar-Year-Icon-800w800h-Watermarked.jpg" style="width: 50px; height: 50px;" alt=""></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /.row -->
-    </div>
+<app-view [section]="seccionActual"></app-view>
+    
     <!-- /.col-lg-6 -->
 
     <div class="col-lg-3">
@@ -110,17 +74,7 @@
   </div>
   <!-- /.row -->
 
-  <div class="row" *ngIf="seccionActual=='INSIGNIAS'" >
-       Insignias Funcionando
-  </div>
-
-  <div class="row" *ngIf="seccionActual=='GRUPOS'" >
-       Grupos Funcionando
-  </div>
-
-  <div class="row" *ngIf="seccionActual=='EVENTOS'" >
-       Eventos Funcionando
-  </div>
+ 
 
 </div>
 <app-footer></app-footer>

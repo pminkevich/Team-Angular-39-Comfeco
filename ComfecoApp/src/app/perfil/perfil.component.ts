@@ -11,7 +11,7 @@ export class PerfilComponent implements OnInit {
   configNav;
   user: User;
   classSubMenu="bg-strongDark";
-  seccionActual="PERFIL";
+  seccionActual:string="insignias";
   constructor(private authSvc: AuthService) { 
 this.configNav = { user: { name: true, nick: true, notification: true }, items: [{ name: 'Home', link: '/home', active: true }, { name: 'Inscribite Aqui!', link: '/register' }, { name: 'Login', link: '/login' }] };
 
@@ -33,24 +33,27 @@ this.configNav = { user: { name: true, nick: true, notification: true }, items: 
     this.configNav = { user: { name: true, nick: true, notification: true }, items: [{ name: 'Home', link: '/home', active: true }, { name: 'Inscribite Aqui!', link: '/register' }, { name: 'Login', link: '/login' }] };
 
   }
+view(section:string){
+  this.seccionActual = section;
 
-  seccionPerfil(){
-    this.classSubMenu="bg-strongDark";
-    this.seccionActual="PERFIL";
-  }
+}
+  // seccionPerfil(){
+  //   this.classSubMenu="bg-strongDark";
+  //   this.seccionActual="PERFIL";
+  // }
 
-  seccionInsignias(){
-    this.classSubMenu="bg-semiStrongDark";
-    this.seccionActual="INSIGNIAS";
-  }
+  // seccionInsignias(){
+  //   this.classSubMenu="bg-semiStrongDark";
+  //   this.seccionActual="INSIGNIAS";
+  // }
 
-  seccionGrupos(){
-    this.classSubMenu="bg-semilightDark";
-    this.seccionActual="GRUPOS";
-  }
+  // seccionGrupos(){
+  //   this.classSubMenu="bg-semilightDark";
+  //   this.seccionActual="GRUPOS";
+  // }
 
-  seccionEventos(){
-    this.classSubMenu="bg-lightDark";
-    this.seccionActual="EVENTOS";
-  }
+  // seccionEventos(){
+  //   this.classSubMenu="bg-lightDark";
+  //   this.seccionActual="EVENTOS";
+  // }
 }
