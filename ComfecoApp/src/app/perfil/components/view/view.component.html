@@ -130,30 +130,35 @@
 <div class="row" *ngIf="section=='profile'">
 <section class="login-content">
   <div class="login-content__main">
-    <div class="login-content__logo">
-      <img src="./../../../assets/images/logo.svg" alt="" srcset="" />
-    </div>
+    
 
     <div class="login-content__titles">
-      <h2>Registrar</h2>
+      <div class="userMenu">
+        <div  class="user">
+          <img src="{{user.photoURL}}" alt="">
+          <p>{{user.displayName}}</p>
+          <div class="but"></div>
+        </div>
+      </div>
     </div>
 
     <form class="form" [formGroup]="registerForm" (ngSubmit)="onRegister()">
-
+      <div class="line">
       <div class="form__group">
         <label for="nick">Nick Name</label>
-        <input type="text" formControlName="nickName" placeholder="Ingresa tu Nick Name" />
+        <input type="text" value="{{user.displayName}}" formControlName="nickName" placeholder="Ingresa tu Nick Name" />
         <p class="form__error" *ngIf="nickName.invalid && (nickName.dirty || nickName.touched)">
           {{ getErrorMessage("nickName") }}
         </p>
       </div>
       <div class="form__group">
         <label for="nombre">Nombre</label>
-        <input type="text" formControlName="name" placeholder="Ingresa tu nombre" />
+        <input type="text" value="{{user.displayName}}" formControlName="name" placeholder="Ingresa tu nombre" />
         <p class="form__error" *ngIf="name.invalid && (name.dirty || name.touched)">
           {{ getErrorMessage("name") }}
         </p>
       </div>
+</div>
       <div class="form__group">
         <label for="email">Email</label>
         <input type="email" formControlName="email" placeholder="Ingresa tu email" />

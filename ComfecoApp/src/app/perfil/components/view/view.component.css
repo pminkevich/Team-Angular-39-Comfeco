@@ -77,8 +77,23 @@ color: red;
 font-size: .8rem;
 margin: 10px 0;
 }
+.line{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
 
+}
+.userMenu{
+display: flex;
+justify-content: center;
+align-items: center;
 
+}
+.user img{
+border-radius: 50%;
+
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
