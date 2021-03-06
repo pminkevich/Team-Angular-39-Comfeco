@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '@app/core/services/auth.service';
+import { User } from '@app/shared/models/user.interface';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -11,7 +12,9 @@ import Swal from 'sweetalert2';
 })
 export class ViewComponent implements OnInit {
 @Input() section:string;
+@Input() user: User;
   registerForm: FormGroup;
+ 
 
   constructor(private authSvc: AuthService, private router: Router, private fb: FormBuilder) {
 

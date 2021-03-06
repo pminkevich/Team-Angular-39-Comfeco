@@ -6,16 +6,18 @@ import { RouterModule } from '@angular/router';
 import { InsigniasComponent } from './compnents/insignias/insignias.component';
 import { CardEventsComponent } from './compnents/card-events/card-events.component';
 import { SwiperModule } from 'swiper/angular';
-
+import { FormEditUserComponent } from './form/form-edit-user/form-edit-user.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [FooterComponent,NavComponent, InsigniasComponent, CardEventsComponent],
+  declarations: [FooterComponent, NavComponent, InsigniasComponent, CardEventsComponent, FormEditUserComponent],
   imports: [
     CommonModule,
     RouterModule,
-    SwiperModule
+    SwiperModule,
+    ReactiveFormsModule
   ],
-  exports: [FooterComponent, NavComponent,InsigniasComponent,CardEventsComponent]
+  exports: [FooterComponent, NavComponent, InsigniasComponent, CardEventsComponent, FormEditUserComponent]
 })
 export class SharedModule { }
