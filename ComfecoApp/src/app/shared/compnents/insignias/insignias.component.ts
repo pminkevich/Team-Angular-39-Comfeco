@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Insignias } from '@app/core/models/insignias.model';
 // import Swiper core and required modules
 import SwiperCore, {
   Pagination,
@@ -15,10 +16,10 @@ SwiperCore.use([Autoplay, Pagination, Scrollbar,Navigation, A11y]);
   styleUrls: ['./insignias.component.css']
 })
 export class InsigniasComponent implements OnInit {
-
-  insignias=[];
+@Input() insignias:Insignias[];
+  //insignias=[];
       constructor() {
-        this.insignias = Array.from({ length: 10 }).map(
+       Array.from({ length: 10 }).map(
           (el, index) => `insignias ${index + 1}`
         );
       }

@@ -1,11 +1,22 @@
+import { Roles } from "@app/shared/models/user.interface";
 
-export class user {
-
-name:string;
+export class User {
+uid:string;
+emailVerified:boolean;
+genero?:string;
+FchNacimiento?:string;
+pais?:string;
+areaConocimiento?:string;
+facebook?:string;
+github?:string;
+linkedin?:string;
+twitter?:string;
+biografia?:string;
+name?:string;
 nickName?:string;
 userId?:string;
 isLider?:boolean;
-email?:string;
+email:string;
 whatsapp?:string;
 discordUser?:string;
 discordAlias?:string;
@@ -16,6 +27,9 @@ team?:boolean;
 teamId?:string;
 photo?:string;
 seniority?:string;
+photoURL?:string;
+displayName?:string;
+role?:Roles;
 
 
 /**
