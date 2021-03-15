@@ -22,7 +22,8 @@ export class ViewComponent implements OnInit {
             private router: Router, 
             private fb: FormBuilder,
             private ss:SkillService) {
-  this.ss.insignias$.subscribe(resp=>{
+
+this.ss.insignias$.subscribe(resp=>{
 
 this.insignias=resp;
 

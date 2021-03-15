@@ -1,4 +1,5 @@
 import { Roles } from "@app/shared/models/user.interface";
+import { Insignias } from "./insignias.model";
 
 export class User {
 uid:string;
@@ -30,6 +31,7 @@ seniority?:string;
 photoURL?:string;
 displayName?:string;
 role?:Roles;
+insignias?: InsigniasUser[];
 
 
 /**
@@ -40,6 +42,21 @@ constructor(name, level,teamId,isLider ) {
  this.level=level;
  this.teamId=teamId;
  this.isLider=isLider;
+  
+}
+
+}
+
+export class InsigniasUser{
+
+tipo:string;
+state:boolean;
+/**
+ *
+ */
+constructor(tipo:string,state:boolean) {
+  this.tipo=tipo;
+this.state=state;
   
 }
 

@@ -77,7 +77,7 @@ private ss:SkillService) {
     //si tiene todo cargado activo la insignia
     if (this.perfilStateValue >= 22) {
 
-      this.ss.insignias[0].isActive = true;
+      this.ss.updateInsignia('sociable');
       Swal.fire({
         title: 'Insignia Sociable',
         text: 'Has Obtenido una Nueva Insignia! ',
